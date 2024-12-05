@@ -1,0 +1,67 @@
+.heading {
+    background-color: black;
+    color: white;
+    font-weight: bolder;
+    font-size: xx-large;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.middle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    height: 200px;
+}
+
+button {
+    background-color: green;
+    height: 40px;
+    width: 100px;
+    padding: 3px;
+    color: white;
+    font-size: large;
+    border-radius: 3px;
+    margin-left: 40px;
+    cursor: pointer;
+}
+
+body {
+    background-color: rgb(35, 31, 31);
+    font-family: Arial, sans-serif;
+}
+
+input {
+    height: 40px;
+    width: 300px;
+    border-radius: 4px;
+    color: black;
+    text-align: center;
+    font-size: large;
+}
+
+.task-list {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #444;
+    color: white;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: large;
+    width: 300px;
+    text-align: center;
+}
