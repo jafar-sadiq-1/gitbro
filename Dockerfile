@@ -2,19 +2,19 @@
 FROM node:latest
 
 # Set the working directory inside the container
-WORKDIR /usr/src/app
+WORKDIR /app
 
-# Copy package.json and package-lock.json
+# Copy package.json and package-lock.json (if available) to install dependencies
 COPY package*.json ./
 
 # Install project dependencies
 RUN npm install
 
-# Copy the rest of the application code to the container
+# Copy the rest of the application code
 COPY . .
 
-# Expose the port your app runs on (default: 3000)
+# Expose the port the app will run on (e.g., 3000 for Express)
 EXPOSE 3000
 
-# Command to run the server.js file
-CMD ["node", "server.js"]
+# Start the application
+CMD ["npm", "start"]
