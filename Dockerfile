@@ -1,8 +1,20 @@
-# Use the official Nginx image as a base
-FROM nginx:latest
+# Use the official Node.js LTS image as the base image
+FROM node:16
 
-# Copy the HTML file into the container's default HTML directory
-COPY index.html /usr/share/nginx/html/
+# Set the working directory inside the container
+WORKDIR /usr/src/app
 
-# Expose port 80 for accessing the web page
-EXPOSE 80
+# Copy package.json and package-lock.json
+COPY package*.json ./
+
+# Install project dependencies
+RUN npm install
+
+# Copy the rest of the application code to the container
+COPY . .
+
+# Expose the port your app runs on (default: 3000)
+EXPOSE 3000
+
+# Command to run the server.js file
+CMD ["node", "server.js"]
